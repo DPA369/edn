@@ -1,0 +1,1 @@
+frutas={"maçã","banana", "laranja", "morango"}
