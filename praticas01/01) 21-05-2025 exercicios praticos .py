@@ -23,3 +23,33 @@
 #Após cada erro, o programa deve informar o usuário sobre o erro e solicitar nova entrada.​
 
 #Quando uma operação é concluída com sucesso, exiba o resultado e encerre o programa.
+
+
+
+
+while True:
+    try:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+        operacao = input("Digite a operação (+, -, *, /): ")
+
+        if operacao == "+":
+            resultado = num1 + num2
+        elif operacao == "-":
+            resultado = num1 - num2
+        elif operacao == "*":
+            resultado = num1 * num2
+        elif operacao == "/":
+            if num2 == 0:
+                print("Erro: divisão por zero.")
+                continue
+            resultado = num1 / num2
+        else:
+            print("Erro: operação inválida.")
+            continue
+
+        print(f"Resultado: {resultado}")
+        break
+
+    except ValueError:
+        print("Erro: digite apenas números válidos.")
